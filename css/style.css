@@ -1,0 +1,518 @@
+:root {
+    --primary: #00FCFF;
+    --bg: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #275287;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .hidden {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 3rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    buttom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8% rgba(255, 255, 255, 0) 50%)
+}
+
+.hero .content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero .content .photo {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+}
+
+.hero .content .photo img {
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .content h1 {
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+    margin: 1.4rem 7%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    width: 100%; 
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    mix-blend-mode: difference;
+}
+
+.hero .content a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 4rem; 
+    font-weight: 100;
+    opacity: 0.5; 
+}
+
+.hero .content a i {
+    font-size: 2em; 
+}
+
+.hero .content a:hover {
+    color: var(--primary);
+    opacity: 0.8;
+}
+
+/* About section */
+
+.about, 
+.portofolio {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2, 
+.portofolio h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+.about h2 span, 
+.portofolio h2 span {
+    color: var(--primary);
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 5rem;
+}
+
+
+.about .row .about-img img {
+    width: 75%;
+    filter: brightness(0.5);
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-buttom: 1rem;
+    
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+
+
+/* Portofolio */
+.portofolio h3 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.portofolio h3 span {
+    color: var(--primary);
+}
+
+.portofolio .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 7rem
+}
+
+.portofolio .row .portofolio-card {
+    text-align: center;
+    margin-top: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.portofolio .row .portofolio-card a:hover {
+    filter: brightness(0.5);
+}
+.portofolio .row .portofolio-card img {
+    border-radius: 50%;
+    width: 125px; 
+    height: 125px;
+}
+.portofolio .row .portofolio-card-svg {
+    color: #fff;
+    width: 125px; 
+    height: 125px;
+}
+.portofolio .row .portofolio-card .portofolio-card-title {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.portofolio .box {
+    width: 100%; 
+    padding: 10%;
+    background-color: rgba(231, 232, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    border-radius: 10px;
+}
+.portofolio .box .content h1 {
+    color: rgba(231, 232, 255, 0.3);
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+/* Footer */
+footer {
+    background-color: #161A4A;
+    padding: 1rem 7% 1.4rem;
+    margin-top: 3rem; 
+}
+footer h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .row .social {
+    padding: 1rem 0;
+    flex: 1 1 33%;
+}
+footer .row .social h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+footer .row .social a, 
+footer .row .social .email {
+    color: #fff;
+    margin-bottom: 1rem;
+    display: flex;
+}
+footer .row .social a:hover {
+    color: var(--primary);
+    filter: brightness(0.7);
+}
+footer .row .social .svg {
+    width: 8%;
+    height: 8%;
+}
+footer .row .social a p,
+footer .row .social .email p {
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+footer .row .link {
+    flex: 1 1 33%;
+}
+footer .row .link h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+footer .row .link a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+footer .row .link a:hover {
+    color: var(--primary);
+}
+footer .row .link a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transform-origin: 0 0; 
+    transition: 0.2s linear;
+}
+
+footer .row .link a:hover::after {
+    transform: scaleX(0.2);
+}
+footer .row .img {
+    flex: 1 1 33%;
+}
+footer .row .img img {
+    width: 75%;
+}
+footer .credit {
+    text-align: center;
+    margin: 1rem;
+}
+footer .credit a{
+    color: var(--primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 884px){
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-logo {
+        font-size: 4rem;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 36rem;
+        height: 30vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 3rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0; 
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about h2 {
+        font-size: 4rem;
+    }
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+        z-index: -10;
+        margin-bottom: 15rem;
+    }
+    .about .row .content h3 {
+        font-size: 3rem;
+        mix-blend-mode: difference;
+    }
+    .about .row .content p {
+        font-size: 1.6rem;
+        mix-blend-mode: difference;
+    }
+
+    .portofolio h2 {
+        font-size: 4rem;
+    }
+    .portofolio h3 {
+        font-size: 3rem;
+    }
+    .portofolio .row .portofolio-card .portofolio-card-title {
+        font-size: 1.5rem;
+    }
+    
+}
+
+/* Mobile Phone */
+@media (max-width: 480px){
+    html {
+        font-size: 55%;
+    }
+    .navbar .navbar-logo {
+        font-size: 3rem;
+    }
+
+    .navbar .navbar-nav a {
+        font-size: 2.5rem;
+    }
+
+    .hero .content h1 {
+        font-size: 4em;
+    }
+    .hero .content p {
+        font-size: 1.6rem;
+    }
+    .about .row .about-img {
+        
+    }
+    .about .row .content h3{
+        font-size: 4rem;
+    }
+    .about .row .content p{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .about .row .content {
+        padding: 0;
+    }
+    footer .row .social a p,
+    footer .row .social .email p {
+    margin-top: 0.1rem;
+    }
+    footer .row .img img {
+        width: 25%;
+    }
+}
